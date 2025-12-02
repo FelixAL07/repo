@@ -1,6 +1,7 @@
 <script>
-    import Moodmeter from "../components/Moodmeter.svelte";
+    /*Background styling gotten from AI*/
 
+    import Moodmeter from "../components/Moodmeter.svelte";
 </script>
 <main
     class="relative flex min-h-screen items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_top,#fde68a,#fca5a5,#fbcfe8)]"
