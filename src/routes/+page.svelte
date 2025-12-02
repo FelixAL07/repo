@@ -1,0 +1,21 @@
+<script>
+    import Moodmeter from "../components/Moodmeter.svelte";
+
+</script>
+<main
+    class="relative flex min-h-screen items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_top,#fde68a,#fca5a5,#fbcfe8)]"
+>
+    <div class="absolute inset-0 opacity-60 animate-gradient"></div>
+
+    <div class="relative z-10 w-full max-w-xl px-6">
+        <div
+            class="rounded-3xl border border-white/40 bg-white/70 p-8 text-center shadow-2xl backdrop-blur-xl transition-transform duration-500 ease-out hover:-rotate-1 hover:scale-[1.02]"
+        >
+            <Moodmeter />
+        </div>
+    </div>
+
+    <span class="absolute left-10 top-12 text-5xl opacity-30 drop-shadow animate-float-slow">😄</span>
+    <span class="absolute bottom-16 right-16 text-6xl opacity-20 drop-shadow animate-float">🤩</span>
+    <span class="absolute left-1/3 bottom-10 text-4xl opacity-25 drop-shadow animate-float-delayed">🙂</span>
+</main>
