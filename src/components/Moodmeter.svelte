@@ -1,6 +1,15 @@
 <script lang="ts">
-    import { todaysMood, emojis, haveClicked, isLoading } from "../stores/store";
-    import { currentMood, clickHandler, getLocalStorage } from "../services/moodService";
+    import {
+        todaysMood,
+        emojis,
+        haveClicked,
+        isLoading,
+    } from "../stores/store";
+    import {
+        currentMood,
+        clickHandler,
+        getLocalStorage,
+    } from "../services/moodService";
     import { fade } from "svelte/transition";
     import { onMount } from "svelte";
     import Loader from "./Loader.svelte";
@@ -11,7 +20,7 @@
         if (stored) {
             todaysMood.set(stored);
         }
-        $isLoading = false
+        $isLoading = false;
     });
 
     $: mood = currentMood($todaysMood);
@@ -21,13 +30,14 @@
     class="flex items-center justify-center gap-3 sm:gap-4 flex-col min-h-[300px] relative"
 >
     {#if $isLoading}
-    <Loader />
-    {:else if  !$haveClicked}
+        <Loader />
+    {:else if !$haveClicked}
         <div
             transition:fade={{ duration: 200 }}
             class="flex items-center justify-center gap-3 sm:gap-4 flex-col absolute inset-0"
         >
-            <div class="flex gap-3 sm:gap-4">
+            <h2 class="text-2xl font-bold">Hvordan føler du deg idag?</h2>
+            <div class="flex space-between">
                 {#each $emojis as e (e.value)}
                     <button
                         on:click={() => clickHandler(e.value)}
@@ -37,19 +47,7 @@
                     </button>
                 {/each}
             </div>
-
-            <div
-                class="flex items-center justify-center gap-1 sm:gap-2 flex-col"
-            >
-                <h1 class="text-2xl font-bold">Kontorets humør i dag!</h1>
-                <span
-                    class="text-4xl transition-transform hover:scale-110 cursor-default"
-                >
-                    {mood}
-                </span>
-            </div>
         </div>
-        
     {:else}
         <div
             transition:fade={{ duration: 300 }}

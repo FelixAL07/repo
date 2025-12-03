@@ -2,17 +2,20 @@
     /*Background styling gotten from AI*/
 
     import Moodmeter from "../components/Moodmeter.svelte";
+    import TodaysMood from "../components/TodaysMood.svelte";
 </script>
 <main
     class="relative flex min-h-screen items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_top,#fde68a,#fca5a5,#fbcfe8)]"
 >
     <div class="absolute inset-0 opacity-60 animate-gradient"></div>
 
-    <div class="relative z-10 w-full max-w-xl px-6">
+    <div class="relative z-10 w-full max-w-4xl px-6">
         <div
             class="rounded-3xl border border-white/40 bg-white/70 p-8 text-center shadow-2xl backdrop-blur-xl transition-transform duration-500 ease-out hover:-rotate-1 hover:scale-[1.02]"
         >
             <Moodmeter />
+                    <TodaysMood />
+
         </div>
     </div>
 
