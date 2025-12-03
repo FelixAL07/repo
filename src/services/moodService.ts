@@ -29,7 +29,7 @@ export function clickHandler(value: number) {
     setLocalStorage();
     setTimeout(() => {
         haveClicked.set(false)
-    }, 5000);
+    }, 3000);
 }
 
 export async function getLocalStorage() {
