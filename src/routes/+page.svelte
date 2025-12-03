@@ -9,7 +9,7 @@
 >
     <div class="relative z-10 w-full max-w-4xl px-6">
         <div
-            class="rounded-3xl border border-white/40 bg-white/70 p-8 shadow-2xl backdrop-blur-xl transition-transform duration-500 ease-out hover:-rotate-1 hover:scale-[1.02]"
+            class="rounded-3xl border border-white/40 bg-white/70 p-8 shadow-2xl transition-transform duration-500 ease-out hover:-rotate-0.5 hover:scale-[1.02]"
         >
             <!-- Today's Mood at the top -->
             <div class="mb-4">

@@ -39,12 +39,15 @@
             <h2 class="text-2xl font-bold">Hvordan føler du deg idag?</h2>
             <div class="flex space-between">
                 {#each $emojis as e (e.value)}
-                    <button
-                        on:click={() => clickHandler(e.value)}
-                        class="text-[3rem] sm:text-[4rem] transition-all duration-300 ease-out hover:scale-110 hover:opacity-90 cursor-pointer flex items-center justify-center"
-                    >
-                        <span>{e.emoji}</span>
-                    </button>
+                    <div class="flex flex-col items-center">
+                        <button
+                            on:click={() => clickHandler(e.value)}
+                            class="text-[3rem] sm:text-[4rem] transition-all duration-300 ease-out hover:scale-110 hover:opacity-90 cursor-pointer flex items-center justify-center"
+                        >
+                            <span>{e.emoji}</span>
+                        </button>
+                        <span class="text-2xl font-bold">{e.value}</span>
+                    </div>
                 {/each}
             </div>
         </div>
