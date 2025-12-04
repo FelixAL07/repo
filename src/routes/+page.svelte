@@ -23,8 +23,20 @@
             <Moodmeter />
         </div>
     </div>
-    <span class="absolute right-1/7 top-1/8 text-5xl opacity-30 drop-shadow animate-float-slow">😊</span>
-    <span class="absolute left-10 top-12 text-5xl opacity-30 drop-shadow animate-float-slow">😄</span>
-    <span class="absolute bottom-16 right-16 text-6xl opacity-20 drop-shadow animate-float">🤩</span>
-    <span class="absolute left-1/3 bottom-10 text-4xl opacity-25 drop-shadow animate-float-delayed">🙂</span>
+    <span
+        class="absolute right-1/7 top-1/8 text-5xl opacity-30 drop-shadow animate-float-slow"
+        >😊</span
+    >
+    <span
+        class="absolute left-10 top-12 text-5xl opacity-30 drop-shadow animate-float-slow"
+        >😄</span
+    >
+    <span
+        class="absolute bottom-16 right-16 text-6xl opacity-20 drop-shadow animate-float"
+        >🤩</span
+    >
+    <span
+        class="absolute left-1/3 bottom-10 text-4xl opacity-25 drop-shadow animate-float-delayed"
+        >🙂</span
+    >
 </main>

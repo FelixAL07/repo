@@ -6,7 +6,6 @@
         isLoading,
     } from "../stores/store";
     import {
-        currentMood,
         clickHandler,
         getLocalStorage,
     } from "../services/moodService";
@@ -22,8 +21,6 @@
         }
         $isLoading = false;
     });
-
-    $: mood = currentMood($todaysMood);
 </script>
 
 <div
@@ -38,7 +35,7 @@
         >
             <h2 class="text-2xl font-bold">Hvordan føler du deg idag?</h2>
             <div class="flex space-between">
-                {#each $emojis as e (e.value)}
+                {#each $emojis as e}
                     <div class="flex flex-col items-center">
                         <button
                             on:click={() => clickHandler(e.value)}
