@@ -66,7 +66,6 @@ build/             # Production artefacts after `npm run build`
 ## 8. Troubleshooting
 - **No emojis render**: confirm `emojis` store is populated; check for TypeScript build errors in `stores/store.ts`.
 - **Mood never loads**: local storage may contain corrupt JSON—clear `localStorage.todaysMood` via devtools.
-- **Build fails with ESM complaints**: verify Node 18+ and that `type` remains `module` in `package.json`.
 - **Adapter mismatch**: if deploying to environments without Node, switch to a fitting adapter (`@sveltejs/adapter-static`, Cloudflare, etc.) and re-run `npm run build`.
 
 ## 9. Future Enhancements (Backlog)
